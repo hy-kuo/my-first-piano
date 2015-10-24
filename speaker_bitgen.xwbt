@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\user\Desktop\Lab11\Lab11\speaker.ncd
+OUTFILE=C:\Users\user\Desktop\Lab11\Lab11\speaker.bit
+FAMILY=Spartan6
+PART=xc6slx16-3csg324
+WORKINGDIR=C:\Users\user\Desktop\Lab11\Lab11
+LICENSE=WebPack
+USER_INFO=210729283_0_0_373

@@ -1,0 +1,1109 @@
+Release 14.4 - xst P.49d (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: speaker.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "speaker.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "speaker"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : speaker
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\user\Desktop\Lab11\Lab11\freq_div.v" into library work
+Parsing verilog file "global.v" included at line 21.
+Parsing module <freq_div>.
+Analyzing Verilog file "C:\Users\user\Desktop\Lab11\Lab11\speaker_control.v" into library work
+Parsing module <speaker_control>.
+Analyzing Verilog file "C:\Users\user\Desktop\Lab11\Lab11\note_gen.v" into library work
+Parsing module <buzzer_control>.
+Analyzing Verilog file "C:\Users\user\Desktop\Lab11\Lab11\keypad_scan.v" into library work
+Parsing verilog file "global.v" included at line 11.
+Parsing module <keypad_scan>.
+Analyzing Verilog file "C:\Users\user\Desktop\Lab11\Lab11\ftsd.v" into library work
+Parsing verilog file "global.v" included at line 11.
+Parsing module <ftsd>.
+Analyzing Verilog file "C:\Users\user\Desktop\Lab11\Lab11\freqdiv.v" into library work
+Parsing verilog file "global.v" included at line 11.
+Parsing module <freqdiv>.
+Analyzing Verilog file "C:\Users\user\Desktop\Lab11\Lab11\DoReMi.v" into library work
+Parsing module <DoReMi>.
+Analyzing Verilog file "C:\Users\user\Desktop\Lab11\Lab11\clk_div.v" into library work
+Parsing module <clk_div>.
+Analyzing Verilog file "C:\Users\user\Desktop\Lab11\Lab11\boo.v" into library work
+Parsing module <boo>.
+Analyzing Verilog file "C:\Users\user\Desktop\Lab11\Lab11\speaker.v" into library work
+Parsing module <speaker>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+WARNING:HDLCompiler:1016 - "C:\Users\user\Desktop\Lab11\Lab11\speaker.v" Line 83: Port clock_1MHz is not connected to this instance
+
+Elaborating module <speaker>.
+WARNING:HDLCompiler:604 - "C:\Users\user\Desktop\Lab11\Lab11\speaker.v" Line 75: Module instantiation should have an instance name
+
+Elaborating module <freqdiv>.
+WARNING:HDLCompiler:1127 - "C:\Users\user\Desktop\Lab11\Lab11\speaker.v" Line 78: Assignment to clk_d ignored, since the identifier is never used
+WARNING:HDLCompiler:189 - "C:\Users\user\Desktop\Lab11\Lab11\speaker.v" Line 80: Size mismatch in connection of port <clk_ftsd_scan>. Formal port size is 2-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:1127 - "C:\Users\user\Desktop\Lab11\Lab11\speaker.v" Line 80: Assignment to ftsd_ctl_en ignored, since the identifier is never used
+WARNING:HDLCompiler:604 - "C:\Users\user\Desktop\Lab11\Lab11\speaker.v" Line 83: Module instantiation should have an instance name
+
+Elaborating module <clk_div>.
+WARNING:HDLCompiler:413 - "C:\Users\user\Desktop\Lab11\Lab11\clk_div.v" Line 15: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\user\Desktop\Lab11\Lab11\clk_div.v" Line 35: Result of 4-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\user\Desktop\Lab11\Lab11\clk_div.v" Line 46: Result of 4-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\user\Desktop\Lab11\Lab11\clk_div.v" Line 57: Result of 4-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\user\Desktop\Lab11\Lab11\clk_div.v" Line 68: Result of 4-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\user\Desktop\Lab11\Lab11\clk_div.v" Line 79: Result of 4-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\user\Desktop\Lab11\Lab11\clk_div.v" Line 90: Result of 4-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:604 - "C:\Users\user\Desktop\Lab11\Lab11\speaker.v" Line 85: Module instantiation should have an instance name
+
+Elaborating module <keypad_scan>.
+WARNING:HDLCompiler:604 - "C:\Users\user\Desktop\Lab11\Lab11\speaker.v" Line 106: Module instantiation should have an instance name
+
+Elaborating module <ftsd>.
+WARNING:HDLCompiler:189 - "C:\Users\user\Desktop\Lab11\Lab11\speaker.v" Line 107: Size mismatch in connection of port <in>. Formal port size is 4-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:189 - "C:\Users\user\Desktop\Lab11\Lab11\speaker.v" Line 108: Size mismatch in connection of port <display>. Formal port size is 15-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:1127 - "C:\Users\user\Desktop\Lab11\Lab11\speaker.v" Line 108: Assignment to display ignored, since the identifier is never used
+WARNING:HDLCompiler:604 - "C:\Users\user\Desktop\Lab11\Lab11\speaker.v" Line 113: Module instantiation should have an instance name
+
+Elaborating module <DoReMi>.
+WARNING:HDLCompiler:1127 - "C:\Users\user\Desktop\Lab11\Lab11\speaker.v" Line 118: Assignment to in0 ignored, since the identifier is never used
+WARNING:HDLCompiler:189 - "C:\Users\user\Desktop\Lab11\Lab11\speaker.v" Line 119: Size mismatch in connection of port <in1>. Formal port size is 4-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:1127 - "C:\Users\user\Desktop\Lab11\Lab11\speaker.v" Line 119: Assignment to in1 ignored, since the identifier is never used
+
+Elaborating module <buzzer_control>.
+
+Elaborating module <speaker_control>.
+WARNING:HDLCompiler:91 - "C:\Users\user\Desktop\Lab11\Lab11\speaker_control.v" Line 44: Signal <audio_out> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:604 - "C:\Users\user\Desktop\Lab11\Lab11\speaker_control.v" Line 55: Module instantiation should have an instance name
+
+Elaborating module <freq_div>.
+WARNING:HDLCompiler:91 - "C:\Users\user\Desktop\Lab11\Lab11\freq_div.v" Line 51: Signal <clk_32M> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:413 - "C:\Users\user\Desktop\Lab11\Lab11\freq_div.v" Line 53: Result of 5-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:1127 - "C:\Users\user\Desktop\Lab11\Lab11\speaker_control.v" Line 56: Assignment to clk_d ignored, since the identifier is never used
+WARNING:HDLCompiler:189 - "C:\Users\user\Desktop\Lab11\Lab11\speaker_control.v" Line 57: Size mismatch in connection of port <clk_ctl>. Formal port size is 2-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:1127 - "C:\Users\user\Desktop\Lab11\Lab11\speaker_control.v" Line 57: Assignment to clk_ctl ignored, since the identifier is never used
+WARNING:HDLCompiler:189 - "C:\Users\user\Desktop\Lab11\Lab11\speaker_control.v" Line 62: Size mismatch in connection of port <clk_counter>. Formal port size is 1-bit while actual signal size is 5-bit.
+WARNING:HDLCompiler:604 - "C:\Users\user\Desktop\Lab11\Lab11\speaker.v" Line 153: Module instantiation should have an instance name
+
+Elaborating module <boo>.
+WARNING:HDLCompiler:413 - "C:\Users\user\Desktop\Lab11\Lab11\boo.v" Line 44: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\user\Desktop\Lab11\Lab11\boo.v" Line 143: Result of 8-bit expression is truncated to fit in 7-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\user\Desktop\Lab11\Lab11\boo.v" Line 150: Result of 4-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\user\Desktop\Lab11\Lab11\boo.v" Line 152: Result of 4-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\user\Desktop\Lab11\Lab11\boo.v" Line 183: Result of 8-bit expression is truncated to fit in 7-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\user\Desktop\Lab11\Lab11\boo.v" Line 184: Result of 8-bit expression is truncated to fit in 7-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\user\Desktop\Lab11\Lab11\boo.v" Line 195: Result of 4-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\user\Desktop\Lab11\Lab11\boo.v" Line 197: Result of 4-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\user\Desktop\Lab11\Lab11\boo.v" Line 208: Result of 32-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:634 - "C:\Users\user\Desktop\Lab11\Lab11\speaker.v" Line 107: Net <ftsd_in> does not have a driver.
+WARNING:HDLCompiler:634 - "C:\Users\user\Desktop\Lab11\Lab11\speaker.v" Line 114: Net <clk_out> does not have a driver.
+WARNING:Xst:2972 - "C:\Users\user\Desktop\Lab11\Lab11\speaker.v" line 106. All outputs of instance <_i000004> of block <ftsd> are unconnected in block <speaker>. Underlying logic will be removed.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <speaker>.
+    Related source file is "C:\Users\user\Desktop\Lab11\Lab11\speaker.v".
+INFO:Xst:3210 - "C:\Users\user\Desktop\Lab11\Lab11\speaker.v" line 75: Output port <clk_ftsd_scan> of the instance <_i000001> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\user\Desktop\Lab11\Lab11\speaker.v" line 75: Output port <clk_1> of the instance <_i000001> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\user\Desktop\Lab11\Lab11\speaker.v" line 83: Output port <clock_1MHz> of the instance <_i000002> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\user\Desktop\Lab11\Lab11\speaker.v" line 83: Output port <clock_10KHz> of the instance <_i000002> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\user\Desktop\Lab11\Lab11\speaker.v" line 83: Output port <clock_1KHz> of the instance <_i000002> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\user\Desktop\Lab11\Lab11\speaker.v" line 83: Output port <clock_100Hz> of the instance <_i000002> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\user\Desktop\Lab11\Lab11\speaker.v" line 83: Output port <clock_10Hz> of the instance <_i000002> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\user\Desktop\Lab11\Lab11\speaker.v" line 83: Output port <clock_1Hz> of the instance <_i000002> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\user\Desktop\Lab11\Lab11\speaker.v" line 106: Output port <display> of the instance <_i000004> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\user\Desktop\Lab11\Lab11\speaker.v" line 113: Output port <in0> of the instance <_i000005> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\user\Desktop\Lab11\Lab11\speaker.v" line 113: Output port <in1> of the instance <_i000005> is unconnected or connected to loadless signal.
+WARNING:Xst:653 - Signal <ftsd_in> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <clk_out> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Summary:
+	no macro.
+Unit <speaker> synthesized.
+
+Synthesizing Unit <freqdiv>.
+    Related source file is "C:\Users\user\Desktop\Lab11\Lab11\freqdiv.v".
+    Found 2-bit register for signal <clk_ftsd_scan>.
+    Found 6-bit register for signal <cnt_h>.
+    Found 15-bit register for signal <cnt_l>.
+    Found 1-bit register for signal <clk_debounce>.
+    Found 1-bit register for signal <clk_1>.
+    Found 25-bit adder for signal <cnt_next> created at line 37.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  25 D-type flip-flop(s).
+Unit <freqdiv> synthesized.
+
+Synthesizing Unit <clk_div>.
+    Related source file is "C:\Users\user\Desktop\Lab11\Lab11\clk_div.v".
+    Found 1-bit register for signal <clock_1MHz_int>.
+    Found 1-bit register for signal <clock_1MHz>.
+    Found 1-bit register for signal <clock_100KHz>.
+    Found 1-bit register for signal <clock_10KHz>.
+    Found 1-bit register for signal <clock_1KHz>.
+    Found 1-bit register for signal <clock_100Hz>.
+    Found 1-bit register for signal <clock_10Hz>.
+    Found 1-bit register for signal <clock_1Hz>.
+    Found 3-bit register for signal <count_100KHz>.
+    Found 1-bit register for signal <clock_100KHz_int>.
+    Found 3-bit register for signal <count_10KHz>.
+    Found 1-bit register for signal <clock_10KHz_int>.
+    Found 3-bit register for signal <count_1KHz>.
+    Found 1-bit register for signal <clock_1KHz_int>.
+    Found 3-bit register for signal <count_100Hz>.
+    Found 1-bit register for signal <clock_100Hz_int>.
+    Found 3-bit register for signal <count_10Hz>.
+    Found 1-bit register for signal <clock_10Hz_int>.
+    Found 3-bit register for signal <count_1Hz>.
+    Found 1-bit register for signal <clock_1Hz_int>.
+    Found 5-bit register for signal <count_1MHz>.
+    Found 5-bit adder for signal <count_1MHz[4]_GND_3_o_add_2_OUT> created at line 15.
+    Found 3-bit adder for signal <count_100KHz[2]_GND_3_o_add_7_OUT> created at line 35.
+    Found 3-bit adder for signal <count_10KHz[2]_GND_3_o_add_12_OUT> created at line 46.
+    Found 3-bit adder for signal <count_1KHz[2]_GND_3_o_add_17_OUT> created at line 57.
+    Found 3-bit adder for signal <count_100Hz[2]_GND_3_o_add_22_OUT> created at line 68.
+    Found 3-bit adder for signal <count_10Hz[2]_GND_3_o_add_27_OUT> created at line 79.
+    Found 3-bit adder for signal <count_1Hz[2]_GND_3_o_add_32_OUT> created at line 90.
+    Summary:
+	inferred   7 Adder/Subtractor(s).
+	inferred  37 D-type flip-flop(s).
+Unit <clk_div> synthesized.
+
+Synthesizing Unit <keypad_scan>.
+    Related source file is "C:\Users\user\Desktop\Lab11\Lab11\keypad_scan.v".
+    Found 4-bit register for signal <pause_delay>.
+    Found 4-bit register for signal <key>.
+    Found 2-bit register for signal <sel>.
+    Found 1-bit register for signal <keypad_state>.
+    Found 1-bit register for signal <pressed>.
+    Found 2-bit adder for signal <sel_next> created at line 49.
+    Found 4-bit adder for signal <pause_delay[3]_GND_4_o_add_26_OUT> created at line 192.
+    Found 4x4-bit Read Only RAM for signal <row_n>
+    Summary:
+	inferred   1 RAM(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred  12 D-type flip-flop(s).
+	inferred   5 Multiplexer(s).
+Unit <keypad_scan> synthesized.
+
+Synthesizing Unit <DoReMi>.
+    Related source file is "C:\Users\user\Desktop\Lab11\Lab11\DoReMi.v".
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <rst_n> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:653 - Signal <in0> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <in1> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Found 16x20-bit Read Only RAM for signal <out>
+    Summary:
+	inferred   1 RAM(s).
+Unit <DoReMi> synthesized.
+
+Synthesizing Unit <buzzer_control>.
+    Related source file is "C:\Users\user\Desktop\Lab11\Lab11\note_gen.v".
+    Found 20-bit register for signal <clk_cnt>.
+    Found 1-bit register for signal <b_clk>.
+    Found 20-bit adder for signal <clk_cnt[19]_GND_7_o_add_2_OUT> created at line 59.
+    Found 20-bit comparator equal for signal <clk_cnt[19]_note_div[19]_equal_2_o> created at line 52
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  21 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   1 Multiplexer(s).
+Unit <buzzer_control> synthesized.
+
+Synthesizing Unit <speaker_control>.
+    Related source file is "C:\Users\user\Desktop\Lab11\Lab11\speaker_control.v".
+INFO:Xst:3210 - "C:\Users\user\Desktop\Lab11\Lab11\speaker_control.v" line 55: Output port <clk_ctl> of the instance <_i000004> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\user\Desktop\Lab11\Lab11\speaker_control.v" line 55: Output port <clk_out> of the instance <_i000004> is unconnected or connected to loadless signal.
+    Found 32-bit register for signal <audio_out>.
+    Found 5-bit subtractor for signal <counter> created at line 39.
+    Found 1-bit 32-to-1 multiplexer for signal <counter[4]_audio_out[31]_Mux_1_o> created at line 44.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  32 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+Unit <speaker_control> synthesized.
+
+Synthesizing Unit <freq_div>.
+    Related source file is "C:\Users\user\Desktop\Lab11\Lab11\freq_div.v".
+    Found 4-bit register for signal <clk32M_tmp>.
+    Found 6-bit register for signal <cnt_l>.
+    Found 2-bit register for signal <clk_ctl>.
+    Found 7-bit register for signal <cnt_h>.
+    Found 3-bit register for signal <clk5M_tmp>.
+    Found 1-bit register for signal <clk_5M>.
+    Found 1-bit register for signal <clk_32M>.
+    Found 1-bit register for signal <clk_out>.
+    Found 25-bit adder for signal <cnt_tmp> created at line 51.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  25 D-type flip-flop(s).
+Unit <freq_div> synthesized.
+
+Synthesizing Unit <boo>.
+    Related source file is "C:\Users\user\Desktop\Lab11\Lab11\boo.v".
+        Init = 3'b000
+        Set_StartLine = 3'b001
+        Clear_Screen = 3'b010
+        Copy_Image = 3'b011
+        Pause = 3'b100
+        Delay = 16'b0000000000001000
+WARNING:Xst:2935 - Signal 'LCD_CS1', unconnected in block 'boo', is tied to its initial value (0).
+WARNING:Xst:2935 - Signal 'LCD_CS2', unconnected in block 'boo', is tied to its initial value (1).
+    Found 3-bit register for signal <X_PAGE>.
+    Found 6-bit register for signal <Y>.
+    Found 7-bit register for signal <INDEX>.
+    Found 1-bit register for signal <LCD_DI>.
+    Found 1-bit register for signal <LCD_RW>.
+    Found 2-bit register for signal <IMAGE>.
+    Found 1-bit register for signal <START>.
+    Found 1-bit register for signal <NEW_PAGE>.
+    Found 1-bit register for signal <NEW_COL>.
+    Found 7-bit register for signal <COL_COUNTER>.
+    Found 3-bit register for signal <PAGE_COUNTER>.
+    Found 1-bit register for signal <ENABLE>.
+    Found 8-bit register for signal <LCD_DATA>.
+    Found 3-bit register for signal <STATE>.
+    Found 16-bit register for signal <PAUSE_TIME>.
+    Found 7-bit adder for signal <INDEX[6]_GND_14_o_add_42_OUT> created at line 183.
+    Found 7-bit adder for signal <COL_COUNTER[6]_GND_14_o_add_43_OUT> created at line 184.
+    Found 3-bit adder for signal <X_PAGE[2]_GND_14_o_add_46_OUT> created at line 195.
+    Found 3-bit adder for signal <PAGE_COUNTER[2]_GND_14_o_add_47_OUT> created at line 197.
+    Found 16-bit subtractor for signal <GND_14_o_GND_14_o_sub_82_OUT<15:0>> created at line 208.
+    Found 128x17-bit Read Only RAM for signal <_n0715>
+WARNING:Xst:737 - Found 1-bit latch for signal <PATTERN<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <PATTERN<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <PATTERN<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <PATTERN<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <PATTERN<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <PATTERN<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <PATTERN<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <PATTERN<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 7-bit comparator greater for signal <COL_COUNTER[6]_PWR_11_o_LessThan_13_o> created at line 137
+    Found 7-bit comparator greater for signal <COL_COUNTER[6]_GND_14_o_LessThan_42_o> created at line 177
+    HDL ADVISOR - Describing an operational reset or an explicit power-up state for register <STATE> would allow inference of a finite state machine and as consequence better performance and smaller area.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   5 Adder/Subtractor(s).
+	inferred  60 D-type flip-flop(s).
+	inferred   8 Latch(s).
+	inferred   2 Comparator(s).
+	inferred  61 Multiplexer(s).
+Unit <boo> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 3
+ 128x17-bit single-port Read Only RAM                  : 1
+ 16x20-bit single-port Read Only RAM                   : 1
+ 4x4-bit single-port Read Only RAM                     : 1
+# Adders/Subtractors                                   : 18
+ 16-bit subtractor                                     : 1
+ 2-bit adder                                           : 1
+ 20-bit adder                                          : 1
+ 25-bit adder                                          : 2
+ 3-bit adder                                           : 8
+ 4-bit adder                                           : 1
+ 5-bit adder                                           : 1
+ 5-bit subtractor                                      : 1
+ 7-bit adder                                           : 2
+# Registers                                            : 56
+ 1-bit register                                        : 27
+ 15-bit register                                       : 1
+ 16-bit register                                       : 1
+ 2-bit register                                        : 4
+ 20-bit register                                       : 1
+ 3-bit register                                        : 10
+ 32-bit register                                       : 1
+ 4-bit register                                        : 3
+ 5-bit register                                        : 1
+ 6-bit register                                        : 3
+ 7-bit register                                        : 3
+ 8-bit register                                        : 1
+# Latches                                              : 8
+ 1-bit latch                                           : 8
+# Comparators                                          : 3
+ 20-bit comparator equal                               : 1
+ 7-bit comparator greater                              : 2
+# Multiplexers                                         : 69
+ 1-bit 2-to-1 multiplexer                              : 38
+ 1-bit 32-to-1 multiplexer                             : 1
+ 20-bit 2-to-1 multiplexer                             : 1
+ 3-bit 2-to-1 multiplexer                              : 16
+ 4-bit 2-to-1 multiplexer                              : 3
+ 7-bit 2-to-1 multiplexer                              : 5
+ 8-bit 2-to-1 multiplexer                              : 5
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1710 - FF/Latch <audio_out_15> (without init value) has a constant value of 0 in block <Usc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <audio_out_31> (without init value) has a constant value of 0 in block <Usc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Y_0> (without init value) has a constant value of 0 in block <_i000006>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Y_1> (without init value) has a constant value of 0 in block <_i000006>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Y_2> (without init value) has a constant value of 0 in block <_i000006>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Y_3> (without init value) has a constant value of 0 in block <_i000006>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Y_4> (without init value) has a constant value of 0 in block <_i000006>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Y_5> (without init value) has a constant value of 0 in block <_i000006>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <IMAGE_1> (without init value) has a constant value of 0 in block <_i000006>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2404 -  FFs/Latches <IMAGE<1:1>> (without init value) have a constant value of 0 in block <boo>.
+
+Synthesizing (advanced) Unit <DoReMi>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_out> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 20-bit                    |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <in>            |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <out>           |          |
+    -----------------------------------------------------------------------
+Unit <DoReMi> synthesized (advanced).
+
+Synthesizing (advanced) Unit <boo>.
+The following registers are absorbed into counter <INDEX>: 1 register on signal <INDEX>.
+The following registers are absorbed into counter <PAUSE_TIME>: 1 register on signal <PAUSE_TIME>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0715> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 128-word x 17-bit                   |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <INDEX>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <boo> synthesized (advanced).
+
+Synthesizing (advanced) Unit <buzzer_control>.
+The following registers are absorbed into counter <clk_cnt>: 1 register on signal <clk_cnt>.
+Unit <buzzer_control> synthesized (advanced).
+
+Synthesizing (advanced) Unit <clk_div>.
+The following registers are absorbed into counter <count_1MHz>: 1 register on signal <count_1MHz>.
+The following registers are absorbed into counter <count_100KHz>: 1 register on signal <count_100KHz>.
+The following registers are absorbed into counter <count_10KHz>: 1 register on signal <count_10KHz>.
+The following registers are absorbed into counter <count_1KHz>: 1 register on signal <count_1KHz>.
+The following registers are absorbed into counter <count_100Hz>: 1 register on signal <count_100Hz>.
+The following registers are absorbed into counter <count_10Hz>: 1 register on signal <count_10Hz>.
+The following registers are absorbed into counter <count_1Hz>: 1 register on signal <count_1Hz>.
+Unit <clk_div> synthesized (advanced).
+
+Synthesizing (advanced) Unit <keypad_scan>.
+The following registers are absorbed into counter <sel>: 1 register on signal <sel>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_row_n> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 4-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <sel>           |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <row_n>         |          |
+    -----------------------------------------------------------------------
+Unit <keypad_scan> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 3
+ 128x17-bit single-port distributed Read Only RAM      : 1
+ 16x20-bit single-port distributed Read Only RAM       : 1
+ 4x4-bit single-port distributed Read Only RAM         : 1
+# Adders/Subtractors                                   : 7
+ 25-bit adder                                          : 2
+ 3-bit adder                                           : 2
+ 4-bit adder                                           : 1
+ 5-bit subtractor                                      : 1
+ 7-bit adder                                           : 1
+# Counters                                             : 11
+ 16-bit down counter                                   : 1
+ 2-bit up counter                                      : 1
+ 20-bit up counter                                     : 1
+ 3-bit up counter                                      : 6
+ 5-bit up counter                                      : 1
+ 7-bit up counter                                      : 1
+# Registers                                            : 143
+ Flip-Flops                                            : 143
+# Comparators                                          : 3
+ 20-bit comparator equal                               : 1
+ 7-bit comparator greater                              : 2
+# Multiplexers                                         : 75
+ 1-bit 2-to-1 multiplexer                              : 46
+ 1-bit 32-to-1 multiplexer                             : 1
+ 3-bit 2-to-1 multiplexer                              : 16
+ 4-bit 2-to-1 multiplexer                              : 3
+ 7-bit 2-to-1 multiplexer                              : 5
+ 8-bit 2-to-1 multiplexer                              : 4
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <Y_0> (without init value) has a constant value of 0 in block <boo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Y_1> (without init value) has a constant value of 0 in block <boo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Y_2> (without init value) has a constant value of 0 in block <boo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Y_3> (without init value) has a constant value of 0 in block <boo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Y_4> (without init value) has a constant value of 0 in block <boo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Y_5> (without init value) has a constant value of 0 in block <boo>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <audio_out_0> in Unit <speaker_control> is equivalent to the following 27 FFs/Latches, which will be removed : <audio_out_1> <audio_out_2> <audio_out_3> <audio_out_4> <audio_out_5> <audio_out_6> <audio_out_7> <audio_out_8> <audio_out_9> <audio_out_10> <audio_out_11> <audio_out_12> <audio_out_13> <audio_out_16> <audio_out_17> <audio_out_18> <audio_out_19> <audio_out_20> <audio_out_21> <audio_out_22> <audio_out_23> <audio_out_24> <audio_out_25> <audio_out_26> <audio_out_27> <audio_out_28> <audio_out_29> 
+INFO:Xst:2261 - The FF/Latch <audio_out_14> in Unit <speaker_control> is equivalent to the following FF/Latch, which will be removed : <audio_out_30> 
+INFO:Xst:2261 - The FF/Latch <audio_out_15> in Unit <speaker_control> is equivalent to the following FF/Latch, which will be removed : <audio_out_31> 
+WARNING:Xst:1710 - FF/Latch <audio_out_15> (without init value) has a constant value of 0 in block <speaker_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <audio_out_0> of sequential type is unconnected in block <speaker_control>.
+
+Optimizing unit <speaker> ...
+
+Optimizing unit <keypad_scan> ...
+
+Optimizing unit <freqdiv> ...
+
+Optimizing unit <clk_div> ...
+
+Optimizing unit <freq_div> ...
+
+Optimizing unit <boo> ...
+WARNING:Xst:2677 - Node <_i000001/clk_1> of sequential type is unconnected in block <speaker>.
+WARNING:Xst:2677 - Node <_i000001/cnt_h_5> of sequential type is unconnected in block <speaker>.
+WARNING:Xst:2677 - Node <_i000001/cnt_h_4> of sequential type is unconnected in block <speaker>.
+WARNING:Xst:2677 - Node <_i000001/cnt_h_3> of sequential type is unconnected in block <speaker>.
+WARNING:Xst:2677 - Node <_i000001/cnt_h_2> of sequential type is unconnected in block <speaker>.
+WARNING:Xst:2677 - Node <_i000001/cnt_h_1> of sequential type is unconnected in block <speaker>.
+WARNING:Xst:2677 - Node <_i000001/cnt_h_0> of sequential type is unconnected in block <speaker>.
+WARNING:Xst:2677 - Node <_i000002/count_100Hz_2> of sequential type is unconnected in block <speaker>.
+WARNING:Xst:2677 - Node <_i000002/count_100Hz_1> of sequential type is unconnected in block <speaker>.
+WARNING:Xst:2677 - Node <_i000002/count_100Hz_0> of sequential type is unconnected in block <speaker>.
+WARNING:Xst:2677 - Node <_i000002/count_10Hz_2> of sequential type is unconnected in block <speaker>.
+WARNING:Xst:2677 - Node <_i000002/count_10Hz_1> of sequential type is unconnected in block <speaker>.
+WARNING:Xst:2677 - Node <_i000002/count_10Hz_0> of sequential type is unconnected in block <speaker>.
+WARNING:Xst:2677 - Node <_i000002/count_1Hz_2> of sequential type is unconnected in block <speaker>.
+WARNING:Xst:2677 - Node <_i000002/count_1Hz_1> of sequential type is unconnected in block <speaker>.
+WARNING:Xst:2677 - Node <_i000002/count_1Hz_0> of sequential type is unconnected in block <speaker>.
+WARNING:Xst:2677 - Node <_i000002/count_1KHz_2> of sequential type is unconnected in block <speaker>.
+WARNING:Xst:2677 - Node <_i000002/count_1KHz_1> of sequential type is unconnected in block <speaker>.
+WARNING:Xst:2677 - Node <_i000002/count_1KHz_0> of sequential type is unconnected in block <speaker>.
+WARNING:Xst:2677 - Node <_i000002/count_10KHz_2> of sequential type is unconnected in block <speaker>.
+WARNING:Xst:2677 - Node <_i000002/count_10KHz_1> of sequential type is unconnected in block <speaker>.
+WARNING:Xst:2677 - Node <_i000002/count_10KHz_0> of sequential type is unconnected in block <speaker>.
+WARNING:Xst:2677 - Node <_i000002/clock_1Hz> of sequential type is unconnected in block <speaker>.
+WARNING:Xst:2677 - Node <_i000002/clock_1Hz_int> of sequential type is unconnected in block <speaker>.
+WARNING:Xst:2677 - Node <_i000002/clock_10Hz> of sequential type is unconnected in block <speaker>.
+WARNING:Xst:2677 - Node <_i000002/clock_10Hz_int> of sequential type is unconnected in block <speaker>.
+WARNING:Xst:2677 - Node <_i000002/clock_100Hz> of sequential type is unconnected in block <speaker>.
+WARNING:Xst:2677 - Node <_i000002/clock_100Hz_int> of sequential type is unconnected in block <speaker>.
+WARNING:Xst:2677 - Node <_i000002/clock_1KHz> of sequential type is unconnected in block <speaker>.
+WARNING:Xst:2677 - Node <_i000002/clock_1KHz_int> of sequential type is unconnected in block <speaker>.
+WARNING:Xst:2677 - Node <_i000002/clock_10KHz> of sequential type is unconnected in block <speaker>.
+WARNING:Xst:2677 - Node <_i000002/clock_10KHz_int> of sequential type is unconnected in block <speaker>.
+WARNING:Xst:2677 - Node <_i000002/clock_1MHz> of sequential type is unconnected in block <speaker>.
+WARNING:Xst:2677 - Node <Usc/_i000004/clk_out> of sequential type is unconnected in block <speaker>.
+WARNING:Xst:2677 - Node <Usc/_i000004/cnt_h_6> of sequential type is unconnected in block <speaker>.
+WARNING:Xst:2677 - Node <Usc/_i000004/cnt_h_5> of sequential type is unconnected in block <speaker>.
+WARNING:Xst:2677 - Node <Usc/_i000004/cnt_h_4> of sequential type is unconnected in block <speaker>.
+WARNING:Xst:2677 - Node <Usc/_i000004/cnt_h_3> of sequential type is unconnected in block <speaker>.
+WARNING:Xst:2677 - Node <Usc/_i000004/cnt_h_2> of sequential type is unconnected in block <speaker>.
+WARNING:Xst:2677 - Node <Usc/_i000004/cnt_h_1> of sequential type is unconnected in block <speaker>.
+WARNING:Xst:2677 - Node <Usc/_i000004/cnt_h_0> of sequential type is unconnected in block <speaker>.
+WARNING:Xst:2677 - Node <Usc/_i000004/cnt_l_5> of sequential type is unconnected in block <speaker>.
+WARNING:Xst:2677 - Node <Usc/_i000004/cnt_l_4> of sequential type is unconnected in block <speaker>.
+WARNING:Xst:2677 - Node <Usc/_i000004/cnt_l_3> of sequential type is unconnected in block <speaker>.
+WARNING:Xst:2677 - Node <Usc/_i000004/cnt_l_2> of sequential type is unconnected in block <speaker>.
+WARNING:Xst:2677 - Node <Usc/_i000004/cnt_l_1> of sequential type is unconnected in block <speaker>.
+WARNING:Xst:2677 - Node <Usc/_i000004/cnt_l_0> of sequential type is unconnected in block <speaker>.
+WARNING:Xst:2677 - Node <Usc/_i000004/clk_ctl_1> of sequential type is unconnected in block <speaker>.
+WARNING:Xst:2677 - Node <Usc/_i000004/clk_ctl_0> of sequential type is unconnected in block <speaker>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block speaker, actual ratio is 3.
+FlipFlop _i000006/START has been replicated 1 time(s)
+FlipFlop _i000006/STATE_0 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 127
+ Flip-Flops                                            : 127
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : speaker.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 391
+#      GND                         : 1
+#      INV                         : 26
+#      LUT1                        : 26
+#      LUT2                        : 36
+#      LUT3                        : 38
+#      LUT4                        : 28
+#      LUT5                        : 36
+#      LUT6                        : 60
+#      MUXCY                       : 67
+#      MUXF7                       : 9
+#      VCC                         : 1
+#      XORCY                       : 63
+# FlipFlops/Latches                : 135
+#      FD                          : 13
+#      FDC                         : 57
+#      FDCE                        : 4
+#      FDE                         : 45
+#      FDR                         : 8
+#      LD                          : 8
+# Clock Buffers                    : 2
+#      BUFG                        : 2
+# IO Buffers                       : 30
+#      IBUF                        : 6
+#      OBUF                        : 24
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             135  out of  18224     0%  
+ Number of Slice LUTs:                  250  out of   9112     2%  
+    Number used as Logic:               250  out of   9112     2%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    251
+   Number with an unused Flip Flop:     116  out of    251    46%  
+   Number with an unused LUT:             1  out of    251     0%  
+   Number of fully used LUT-FF pairs:   134  out of    251    53%  
+   Number of unique control sets:        15
+
+IO Utilization: 
+ Number of IOs:                          34
+ Number of bonded IOBs:                  30  out of    232    12%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+---------------------------------------------+------------------------------+-------+
+Clock Signal                                 | Clock buffer(FF name)        | Load  |
+---------------------------------------------+------------------------------+-------+
+clk                                          | IBUF+BUFG                    | 55    |
+Usc/_i000004/clk_32M                         | NONE(Usc/audio_out_14)       | 1     |
+_i000001/clk_debounce                        | NONE(_i000003/sel_1)         | 12    |
+_i000002/clock_1MHz_int                      | NONE(_i000002/count_100KHz_2)| 4     |
+_i000002/clock_100KHz                        | BUFG                         | 55    |
+_i000006/_n0715<1>(_i000006_Mram__n0715151:O)| NONE(*)(_i000006/PATTERN_0)  | 8     |
+---------------------------------------------+------------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 4.104ns (Maximum Frequency: 243.662MHz)
+   Minimum input arrival time before clock: 4.056ns
+   Maximum output required time after clock: 4.761ns
+   Maximum combinational path delay: 4.372ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 3.918ns (frequency: 255.213MHz)
+  Total number of paths / destination ports: 5093 / 59
+-------------------------------------------------------------------------
+Delay:               3.918ns (Levels of Logic = 29)
+  Source:            Ung/clk_cnt_2 (FF)
+  Destination:       Ung/clk_cnt_19 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: Ung/clk_cnt_2 to Ung/clk_cnt_19
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.447   0.845  Ung/clk_cnt_2 (Ung/clk_cnt_2)
+     LUT6:I3->O            1   0.205   0.000  Ung/Mcompar_clk_cnt[19]_note_div[19]_equal_2_o_lut<0> (Ung/Mcompar_clk_cnt[19]_note_div[19]_equal_2_o_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  Ung/Mcompar_clk_cnt[19]_note_div[19]_equal_2_o_cy<0> (Ung/Mcompar_clk_cnt[19]_note_div[19]_equal_2_o_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Ung/Mcompar_clk_cnt[19]_note_div[19]_equal_2_o_cy<1> (Ung/Mcompar_clk_cnt[19]_note_div[19]_equal_2_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Ung/Mcompar_clk_cnt[19]_note_div[19]_equal_2_o_cy<2> (Ung/Mcompar_clk_cnt[19]_note_div[19]_equal_2_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Ung/Mcompar_clk_cnt[19]_note_div[19]_equal_2_o_cy<3> (Ung/Mcompar_clk_cnt[19]_note_div[19]_equal_2_o_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Ung/Mcompar_clk_cnt[19]_note_div[19]_equal_2_o_cy<4> (Ung/Mcompar_clk_cnt[19]_note_div[19]_equal_2_o_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Ung/Mcompar_clk_cnt[19]_note_div[19]_equal_2_o_cy<5> (Ung/Mcompar_clk_cnt[19]_note_div[19]_equal_2_o_cy<5>)
+     MUXCY:CI->O          22   0.019   1.134  Ung/Mcompar_clk_cnt[19]_note_div[19]_equal_2_o_cy<6> (Ung/clk_cnt[19]_note_div[19]_equal_2_o)
+     LUT2:I1->O            1   0.205   0.000  Ung/Mcount_clk_cnt_lut<0> (Ung/Mcount_clk_cnt_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  Ung/Mcount_clk_cnt_cy<0> (Ung/Mcount_clk_cnt_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Ung/Mcount_clk_cnt_cy<1> (Ung/Mcount_clk_cnt_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Ung/Mcount_clk_cnt_cy<2> (Ung/Mcount_clk_cnt_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Ung/Mcount_clk_cnt_cy<3> (Ung/Mcount_clk_cnt_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Ung/Mcount_clk_cnt_cy<4> (Ung/Mcount_clk_cnt_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Ung/Mcount_clk_cnt_cy<5> (Ung/Mcount_clk_cnt_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Ung/Mcount_clk_cnt_cy<6> (Ung/Mcount_clk_cnt_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Ung/Mcount_clk_cnt_cy<7> (Ung/Mcount_clk_cnt_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Ung/Mcount_clk_cnt_cy<8> (Ung/Mcount_clk_cnt_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Ung/Mcount_clk_cnt_cy<9> (Ung/Mcount_clk_cnt_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Ung/Mcount_clk_cnt_cy<10> (Ung/Mcount_clk_cnt_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  Ung/Mcount_clk_cnt_cy<11> (Ung/Mcount_clk_cnt_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  Ung/Mcount_clk_cnt_cy<12> (Ung/Mcount_clk_cnt_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  Ung/Mcount_clk_cnt_cy<13> (Ung/Mcount_clk_cnt_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  Ung/Mcount_clk_cnt_cy<14> (Ung/Mcount_clk_cnt_cy<14>)
+     MUXCY:CI->O           1   0.019   0.000  Ung/Mcount_clk_cnt_cy<15> (Ung/Mcount_clk_cnt_cy<15>)
+     MUXCY:CI->O           1   0.019   0.000  Ung/Mcount_clk_cnt_cy<16> (Ung/Mcount_clk_cnt_cy<16>)
+     MUXCY:CI->O           1   0.019   0.000  Ung/Mcount_clk_cnt_cy<17> (Ung/Mcount_clk_cnt_cy<17>)
+     MUXCY:CI->O           0   0.019   0.000  Ung/Mcount_clk_cnt_cy<18> (Ung/Mcount_clk_cnt_cy<18>)
+     XORCY:CI->O           1   0.180   0.000  Ung/Mcount_clk_cnt_xor<19> (Ung/Mcount_clk_cnt19)
+     FDC:D                     0.102          Ung/clk_cnt_19
+    ----------------------------------------
+    Total                      3.918ns (1.939ns logic, 1.979ns route)
+                                       (49.5% logic, 50.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock '_i000001/clk_debounce'
+  Clock period: 2.772ns (frequency: 360.724MHz)
+  Total number of paths / destination ports: 39 / 16
+-------------------------------------------------------------------------
+Delay:               2.772ns (Levels of Logic = 1)
+  Source:            _i000003/keypad_state (FF)
+  Destination:       _i000003/key_3 (FF)
+  Source Clock:      _i000001/clk_debounce rising
+  Destination Clock: _i000001/clk_debounce rising
+
+  Data Path: _i000003/keypad_state to _i000003/key_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              7   0.447   1.118  _i000003/keypad_state (_i000003/keypad_state)
+     LUT5:I0->O            4   0.203   0.683  _i000003/_n0080_inv1 (_i000003/_n0080_inv)
+     FDCE:CE                   0.322          _i000003/key_0
+    ----------------------------------------
+    Total                      2.772ns (0.972ns logic, 1.800ns route)
+                                       (35.1% logic, 64.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock '_i000002/clock_1MHz_int'
+  Clock period: 2.644ns (frequency: 378.243MHz)
+  Total number of paths / destination ports: 19 / 7
+-------------------------------------------------------------------------
+Delay:               2.644ns (Levels of Logic = 1)
+  Source:            _i000002/count_100KHz_1 (FF)
+  Destination:       _i000002/count_100KHz_2 (FF)
+  Source Clock:      _i000002/clock_1MHz_int rising
+  Destination Clock: _i000002/clock_1MHz_int rising
+
+  Data Path: _i000002/count_100KHz_1 to _i000002/count_100KHz_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              4   0.447   0.912  _i000002/count_100KHz_1 (_i000002/count_100KHz_1)
+     LUT3:I0->O            3   0.205   0.650  _i000002/n0015<2>1 (_i000002/n0015)
+     FDR:R                     0.430          _i000002/count_100KHz_0
+    ----------------------------------------
+    Total                      2.644ns (1.082ns logic, 1.562ns route)
+                                       (40.9% logic, 59.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock '_i000002/clock_100KHz'
+  Clock period: 4.104ns (frequency: 243.662MHz)
+  Total number of paths / destination ports: 846 / 100
+-------------------------------------------------------------------------
+Delay:               4.104ns (Levels of Logic = 4)
+  Source:            _i000006/STATE_2 (FF)
+  Destination:       _i000006/STATE_0 (FF)
+  Source Clock:      _i000002/clock_100KHz rising
+  Destination Clock: _i000002/clock_100KHz rising
+
+  Data Path: _i000006/STATE_2 to _i000006/STATE_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              14   0.447   0.958  _i000006/STATE_2 (_i000006/STATE_2)
+     LUT2:I1->O            1   0.205   0.580  _i000006/STATE_NEXT<0>2_SW0 (N16)
+     LUT6:I5->O            2   0.205   0.617  _i000006/STATE_NEXT<0>2 (_i000006/STATE_NEXT<0>2)
+     LUT3:I2->O            1   0.205   0.580  _i000006/STATE_NEXT<0>_SW0 (N14)
+     LUT6:I5->O            2   0.205   0.000  _i000006/STATE_NEXT<0> (_i000006/STATE_NEXT<0>)
+     FD:D                      0.102          _i000006/STATE_0
+    ----------------------------------------
+    Total                      4.104ns (1.369ns logic, 2.735ns route)
+                                       (33.4% logic, 66.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 48 / 48
+-------------------------------------------------------------------------
+Offset:              4.056ns (Levels of Logic = 2)
+  Source:            rst_n (PAD)
+  Destination:       Ung/clk_cnt_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: rst_n to Ung/clk_cnt_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.222   0.579  rst_n_IBUF (rst_n_IBUF)
+     INV:I->O             61   0.206   1.620  Ung/rst_n_inv1_INV_0 (Ung/rst_n_inv)
+     FDC:CLR                   0.430          Ung/clk_cnt_0
+    ----------------------------------------
+    Total                      4.056ns (1.858ns logic, 2.198ns route)
+                                       (45.8% logic, 54.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Usc/_i000004/clk_32M'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.056ns (Levels of Logic = 2)
+  Source:            rst_n (PAD)
+  Destination:       Usc/audio_out_14 (FF)
+  Destination Clock: Usc/_i000004/clk_32M rising
+
+  Data Path: rst_n to Usc/audio_out_14
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.222   0.579  rst_n_IBUF (rst_n_IBUF)
+     INV:I->O             61   0.206   1.620  Ung/rst_n_inv1_INV_0 (Ung/rst_n_inv)
+     FDC:CLR                   0.430          Usc/audio_out_14
+    ----------------------------------------
+    Total                      4.056ns (1.858ns logic, 2.198ns route)
+                                       (45.8% logic, 54.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock '_i000001/clk_debounce'
+  Total number of paths / destination ports: 68 / 26
+-------------------------------------------------------------------------
+Offset:              4.056ns (Levels of Logic = 2)
+  Source:            rst_n (PAD)
+  Destination:       _i000003/sel_1 (FF)
+  Destination Clock: _i000001/clk_debounce rising
+
+  Data Path: rst_n to _i000003/sel_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.222   0.579  rst_n_IBUF (rst_n_IBUF)
+     INV:I->O             61   0.206   1.620  Ung/rst_n_inv1_INV_0 (Ung/rst_n_inv)
+     FDCE:CLR                  0.430          _i000003/key_0
+    ----------------------------------------
+    Total                      4.056ns (1.858ns logic, 2.198ns route)
+                                       (45.8% logic, 54.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock '_i000001/clk_debounce'
+  Total number of paths / destination ports: 10 / 6
+-------------------------------------------------------------------------
+Offset:              4.761ns (Levels of Logic = 2)
+  Source:            _i000003/sel_0 (FF)
+  Destination:       row_n<2> (PAD)
+  Source Clock:      _i000001/clk_debounce rising
+
+  Data Path: _i000003/sel_0 to row_n<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             10   0.447   0.961  _i000003/sel_0 (_i000003/sel_0)
+     LUT2:I0->O            1   0.203   0.579  _i000003/Mram_row_n21 (row_n_2_OBUF)
+     OBUF:I->O                 2.571          row_n_2_OBUF (row_n<2>)
+    ----------------------------------------
+    Total                      4.761ns (3.221ns logic, 1.540ns route)
+                                       (67.7% logic, 32.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock '_i000002/clock_100KHz'
+  Total number of paths / destination ports: 10 / 10
+-------------------------------------------------------------------------
+Offset:              4.382ns (Levels of Logic = 2)
+  Source:            _i000006/ENABLE (FF)
+  Destination:       LCD_ENABLE (PAD)
+  Source Clock:      _i000002/clock_100KHz rising
+
+  Data Path: _i000006/ENABLE to LCD_ENABLE
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.447   0.580  _i000006/ENABLE (_i000006/ENABLE)
+     LUT2:I1->O            1   0.205   0.579  _i000006/LCD_ENABLE1 (LCD_ENABLE_OBUF)
+     OBUF:I->O                 2.571          LCD_ENABLE_OBUF (LCD_ENABLE)
+    ----------------------------------------
+    Total                      4.382ns (3.223ns logic, 1.159ns route)
+                                       (73.6% logic, 26.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Offset:              4.521ns (Levels of Logic = 2)
+  Source:            Usc/_i000004/clk32M_tmp_0 (FF)
+  Destination:       audio_data (PAD)
+  Source Clock:      clk rising
+
+  Data Path: Usc/_i000004/clk32M_tmp_0 to audio_data
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.447   0.721  Usc/_i000004/clk32M_tmp_0 (Usc/_i000004/clk32M_tmp_0)
+     LUT3:I1->O            1   0.203   0.579  Usc/Mmux_audio_data11 (audio_data_OBUF)
+     OBUF:I->O                 2.571          audio_data_OBUF (audio_data)
+    ----------------------------------------
+    Total                      4.521ns (3.221ns logic, 1.300ns route)
+                                       (71.2% logic, 28.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Usc/_i000004/clk_32M'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.382ns (Levels of Logic = 2)
+  Source:            Usc/audio_out_14 (FF)
+  Destination:       audio_data (PAD)
+  Source Clock:      Usc/_i000004/clk_32M rising
+
+  Data Path: Usc/audio_out_14 to audio_data
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              1   0.447   0.580  Usc/audio_out_14 (Usc/audio_out_14)
+     LUT3:I2->O            1   0.205   0.579  Usc/Mmux_audio_data11 (audio_data_OBUF)
+     OBUF:I->O                 2.571          audio_data_OBUF (audio_data)
+    ----------------------------------------
+    Total                      4.382ns (3.223ns logic, 1.159ns route)
+                                       (73.6% logic, 26.4% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               4.372ns (Levels of Logic = 2)
+  Source:            clk (PAD)
+  Destination:       audio_sysclk (PAD)
+
+  Data Path: clk to audio_sysclk
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.222   0.579  clk_IBUF (clk_IBUF)
+     OBUF:I->O                 2.571          audio_sysclk_OBUF (audio_sysclk)
+    ----------------------------------------
+    Total                      4.372ns (3.793ns logic, 0.579ns route)
+                                       (86.8% logic, 13.2% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock Usc/_i000004/clk_32M
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    1.950|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock _i000001/clk_debounce
+---------------------+---------+---------+---------+---------+
+                     | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock         |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------+---------+---------+---------+---------+
+_i000001/clk_debounce|    2.772|         |         |         |
+---------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock _i000002/clock_100KHz
+---------------------+---------+---------+---------+---------+
+                     | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock         |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------+---------+---------+---------+---------+
+_i000001/clk_debounce|    1.767|         |         |         |
+_i000002/clock_100KHz|    4.104|         |         |         |
+_i000006/_n0715<1>   |         |    2.500|         |         |
+---------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock _i000002/clock_1MHz_int
+-----------------------+---------+---------+---------+---------+
+                       | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock           |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------+---------+---------+---------+---------+
+_i000002/clock_1MHz_int|    2.644|         |         |         |
+-----------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock _i000006/_n0715<1>
+---------------------+---------+---------+---------+---------+
+                     | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock         |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------+---------+---------+---------+---------+
+_i000002/clock_100KHz|         |         |    4.251|         |
+---------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk
+-----------------------+---------+---------+---------+---------+
+                       | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock           |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------+---------+---------+---------+---------+
+_i000001/clk_debounce  |    5.493|         |         |         |
+_i000002/clock_1MHz_int|    1.165|         |         |         |
+clk                    |    3.918|         |         |         |
+-----------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 7.22 secs
+ 
+--> 
+
+Total memory usage is 257968 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  126 (   0 filtered)
+Number of infos    :   20 (   0 filtered)
+
